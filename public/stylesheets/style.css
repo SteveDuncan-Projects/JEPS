@@ -1,0 +1,88 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.container {
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+#hostFamNav {
+	/*margin-bottom: 4em;*/
+	background-color: silver;
+}
+
+* {
+	/*border: 1px solid red;*/
+}
+
+
+body {
+	background-color: silver;
+}
+/*style pets table*/
+table{
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid #cdcdcd;
+    text-align: center;
+}
+table th, table td{
+    padding: 5px;
+}
+td {
+	text-align: center;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.col-md-4, .col-md-2 {
+	padding-left: 0 !important;
+	padding-right: 0;
+}
+#btnHostFamSubmit {
+	margin: 2rem 0 0 1em;
+}
+
+.hidden {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}
+.tab-pane {
+	background-color: silver;
+}
+#hostFamilyForm {
+	/*border: 1px solid black;*/
+}
+#famInfoButtons {
+	/*margin-top: 3em;*/
+	/*display: flex;*/
+	/*width: 100%;*/
+	/*justify-content: center;*/
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+#gender-pref {
+	margin-top: 2rem;
+}
+h1 {
+	padding-top: .5rem;
+	padding-bottom: 1rem;
+}
+* {
+	/*border: 1px solid red;*/
+}

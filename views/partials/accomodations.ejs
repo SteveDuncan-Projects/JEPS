@@ -1,0 +1,161 @@
+<div class="container">
+	<h1>Accomodations</h1>
+	<div class="form-group row">
+		<div class="col-md-4" align="start"> <!-- column 1 -->
+			<!-- <div class="row"> -->
+
+				<!-- <label for="bedroom" class="mt-2">Bedroom: </label> -->
+				<select name="bedroom" id="bedroom" class="btn btn-sm btn-outline-secondary">
+					<option value="bedroom">Bedroom</option>
+					<option value="private">Private</option>
+					<option value="shared">Shared</option>
+				</select>
+			<!-- </div> -->
+			<!-- <div class="row"> -->
+				<!-- <label for="bathroom" class="mt-2">Bathroom</label> -->
+				<select name="bathroom" id="bathroom" class="btn btn-sm btn-outline-secondary">
+					<option value="Bathroom">Bathroom</option>
+					<option value="private">Private</option>
+					<option value="shared">Shared</option>
+				</select>
+			<!-- </div> -->
+			<!-- <div class="row"> -->
+				<!-- <label for="gender-pref" class="mt-2">Student gender preference</label> -->
+				<select name="gender-pref" id="gender-pref" class="btn btn-sm btn-outline-secondary">
+					<option value="either">Student gender preference</option>
+					<option value="either">either</option>
+					<option value="male">male</option>
+					<option value="female">female</option>
+				</select>
+			<!-- </div> -->
+		</div> <!-- /column 1 -->
+
+		<div class="col-md-4"> <!-- column 2 -->
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="checkbox" name="religion" id="religion" value="religion">
+			    Religious orientation OK?
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="checkbox" name="diet" id="diet" value="diet">
+			    Dietary Requirements OK?
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="checkbox" name="guests" id="guests" value="guests">
+			    Two Guests OK?
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="checkbox" name="otherProgs" id="otherProgs" value="otherProgs">
+			    Hosting Other Programs OK?
+			  </label>
+			</div>
+			<div>
+			  <label for="curfew" class="">Guest Return Time?
+			    <input class="" type="text" name="curfew" id="curfew" value="">
+			   </label>  
+			</div>
+		</div><!-- /column 2 -->
+
+		<div class="col-md-4"> <!-- column 3 -->
+			<label for="commuteType">Commute Type: </label>
+			<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" id="commuteType">
+			Transportation Method
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#"><input type="checkbox"/>&nbsp;Car</a>
+				<a class="dropdown-item" href="#"><input type="checkbox"/>&nbsp;Bus</a>
+				<a class="dropdown-item" href="#"><input type="checkbox"/>&nbsp;Max</a>
+				<a class="dropdown-item" href="#"><input type="checkbox"/>&nbsp;Walk</a>
+			</div>
+			<div>
+			  <label for="busLine" class="">Bus/Train Line
+			    <input class="" type="text" name="busLine" id="busLine" value="">
+			   </label>  
+			</div>
+			<div>
+			  <label for="tickets" class="">Tickets Needed
+			    <input class="" type="text" name="tickets" id="tickets" value="">
+			   </label>  
+			</div>
+			<div>
+			  <label for="commuteTime" class="">Commute Time
+			    <input class="" type="text" name="commuteTime" id="commuteTime" value="">
+			   </label>  
+			</div>
+			<div>
+			  <label for="commuteNotes" class="">Commute Notes
+			    <input class="" type="text" name="commuteNotes" id="commuteNotes" value="">
+			   </label>  
+			</div>
+
+		</div> <!-- /column 3 -->
+	</div> <!-- /row -->
+	<div class="form-group row d-flex justify-content-end"">
+		<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
+	</div>
+</div> <!-- /container -->
+
+<!-- <script type="text/javascript">
+    $(function () {
+        $('#lstFruits').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script> -->
+
+<!-- ////////////////////////////////////////// -->
+
+<!-- The below works -->
+	<!-- button to next tab -->
+<!-- 	<div class="form-group row">
+		<div class="col-md-3">
+			<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
+
+		</div>
+	</div>
+
+
+		<div class="col-md-3  px-0">
+		<div class="d-inline-flex justify-content-around align-items-center w-100">
+			<label for="bathroom" class="mt-2">Bathroom: </label>
+			<select name="bedroom" id="bedroom">
+				<option value="private">Private</option>
+				<option value="shared">Shared</option>
+			</select>
+		</div>
+
+		<div class="d-inline-flex justify-content-around align-items-center w-100">
+			<label for="bathroom" class="mt-2">Bathroom</label>
+			<select name="bathroom" id="bathroom">
+				<option value="private">Private</option>
+				<option value="shared">Shared</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-md-3 px-0">
+		<div class="d-inline-flex justify-content-around align-items-center w-100">
+			<label for="gender-pref" class="mt-2">Student gender preference</label>
+			<select name="gender-pref" id="gender-pref" class="form-control">
+				<option value="either">either</option>
+				<option value="male">male</option>
+				<option value="female">female</option>
+			</select>
+		</div>
+	</div> -->
+
+
+
+	<!-- button to next tab -->
+<!-- 	<div class="form-group row">
+		<div class="col-md-3">
+			<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
+
+		</div>
+	</div> -->
