@@ -86,3 +86,22 @@ h1 {
 * {
 	/*border: 1px solid red;*/
 }
+.btn-outline-secondary {
+	background-color: #fff;
+}
+
+#hostFamNav li, #tabs .container{
+	/*background-color: white;*/
+	border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.ui-tabs-active {
+	background-color: white !important;
+}
+
+#tabs .container {
+	padding: 1rem;
+
+}
+

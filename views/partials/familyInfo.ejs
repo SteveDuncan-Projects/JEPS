@@ -3,105 +3,138 @@
 <!-- TODO -->
 <!-- functionality to add additional family members; push to array before submitting form -->
 <div class="container">
-	<h1>Family Information</h1>
-	<div class="form-group row">
-		<div class="col-md-4">
-<!-- 			<label for="firstName-1" class="control-label">First Name</label>
- -->			<input type="text" class="form-control" id="firstName-1" name="firstName-1" placeholder="first name" required>
+	<h2>Host Family Members</h2>
+	<form id="famInfoForm">
+		<div class="form-group row">
+			<div class="col-md-4">
+	<!-- 			<label for="firstNameFam" class="control-label">First Name</label>
+	 -->			<input type="text" class="form-control" id="firstNameFam" name="firstNameFam" placeholder="first name">
 
+			</div>
+
+			<div class="col-md-4">
+	<!-- 			<label for="lastNameFam" class="control-label">Last Name</label>
+	 -->			<input type="text" class="form-control" id="lastNameFam" name="lastNameFam" placeholder="last name">
+
+			</div>
+
+			<div class="col-md-4">
+	<!-- 			<label for="prefName" class="control-label">Preferred Name</label>
+	 -->			<input type="text" class="form-control" id="prefNameFam" name="prefNameFam" placeholder="preferred name">
+			</div>
 		</div>
 
-		<div class="col-md-4">
-<!-- 			<label for="lastName-1" class="control-label">Last Name</label>
- -->			<input type="text" class="form-control" id="lastName-1" name="lastName-1" placeholder="last name" required>
-
-		</div>
-
-		<div class="col-md-4">
-<!-- 			<label for="prefName" class="control-label">Preferred Name</label>
- -->			<input type="text" class="form-control" id="prefName" name="prefName" placeholder="preferred name">
-		</div>
-	</div>
-
-	<div class="form-group row">
-		<div class="col-md-2">
-<!-- 			<label for="phone" class="control-label">phone</label>
- -->			<input type="tel" class="form-control" id="phone" name="phone" placeholder="phone">
-		</div>
-		<!-- TODO -->
-			<!-- make phone input able to add additional numbers and mark as cell/home/work -->
-		<div class="col-md-2">
-<!-- 			<label for="gender" class="control-label">gender</label>
- -->			<select class="form-control" id="gender" name="gender" placeholder="gender">
-				<option value="#">gender</option>
-				<option value="male">male</option>
-				<option value="female">female</option>
-			</select>
-		</div>
-		<div class="col-md-2">
-<!-- 			<label for="relationship" class="control-label">relationship</label>
- -->			<select class="form-control" id="relationship" name="relationship" placeholder="relationship">
-				<option value="#">relationship</option>
-				<option value="mainContact">Main Contact</option>
-				<option value="spouse">Spouse</option>
-				<option value="male">Male</option>
-				<option value="father">Father</option>
-				<option value="mother">Mother</option>
-				<option value="grandfather">Grandfather</option>
-				<option value="grandmother">Male</option>
-				<option value="son">Son</option>
-				<option value="daughter">Daughter</option>
-				<option value="brother">Brother</option>
-				<option value="sister">Sister</option>
-				<option value="grandson">Grandson</option>
-				<option value="granddaughter">Granddaughter</option>
-				<option value="otherRelative">Other Relative</option>
-				<option value="friend">Friend</option>
-				<option value="other">Other</option>
-			</select>
-		</div>
+		<div class="form-group row">
 			<div class="col-md-2">
-<!-- 			<label for="age" class="control-label">age</label>
- -->			<input type="tel" class="form-control" id="age" name="age" placeholder="age">
+	<!-- 			<label for="phone" class="control-label">phone</label>
+	 -->			<input type="tel" class="form-control" id="phone" name="phone" placeholder="phone">
+			</div>
+			<!-- TODO -->
+				<!-- make phone input able to add additional numbers and mark as cell/home/work -->
+			<div class="col-md-2">
+	<!-- 			<label for="gender" class="control-label">gender</label>
+	 -->			<select class="form-control" id="gender" name="gender" placeholder="gender">
+					<option value="#">gender</option>
+					<option value="male">male</option>
+					<option value="female">female</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+	<!-- 			<label for="relationship" class="control-label">relationship</label>
+	 -->			<select class="form-control" id="relationship" name="relationship" placeholder="relationship">
+					<option value="#">relationship</option>
+					<option value="mainContact">Main Contact</option>
+					<option value="spouse">Spouse</option>
+					<option value="male">Male</option>
+					<option value="father">Father</option>
+					<option value="mother">Mother</option>
+					<option value="grandfather">Grandfather</option>
+					<option value="grandmother">Male</option>
+					<option value="son">Son</option>
+					<option value="daughter">Daughter</option>
+					<option value="brother">Brother</option>
+					<option value="sister">Sister</option>
+					<option value="grandson">Grandson</option>
+					<option value="granddaughter">Granddaughter</option>
+					<option value="otherRelative">Other Relative</option>
+					<option value="friend">Friend</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+				<div class="col-md-2">
+	<!-- 			<label for="age" class="control-label">age</label>
+	 -->			<input type="tel" class="form-control" id="age" name="age" placeholder="age">
+			</div>
+			<div class="col-md-2">
+	<!-- 			<label for="email" class="control-label">email</label>
+	 -->			<input type="email" class="form-control" id="emailFam" name="emailFam" placeholder="email">
+			</div>
+			<div class="col-md-2">
+	<!-- 			<label for="occupation" class="control-label">occupation</label>
+	 -->			<input type="text" class="form-control" id="occupation" name="occupation" placeholder="occupation">
+			</div>
+
 		</div>
-		<div class="col-md-2">
-<!-- 			<label for="email" class="control-label">email</label>
- -->			<input type="email" class="form-control" id="email" name="email" placeholder="email">
-		</div>
-		<div class="col-md-2">
-<!-- 			<label for="occupation" class="control-label">occupation</label>
- -->			<input type="text" class="form-control" id="occupation" name="occupation" placeholder="occupation">
-		</div>
 
-	</div>
+		<div class="form-group row">
+			<div class="col-md-4">
+	<!-- 			<label for="hobbies" class="control-label">hobbies</label>
+	 -->			<textarea class="form-control" id="hobbies" name="hobbies" placeholder="hobbies" rows="4"></textarea>
+			</div>
+			<div class="col-md-4">
+	<!-- 			<label for="notes" class="control-label">notes</label>
+	 -->			<textarea class="form-control" id="notes" name="notes" placeholder="notes" rows="4"></textarea>
+			</div>
 
-	<div class="form-group row">
-		<div class="col-md-4">
-<!-- 			<label for="hobbies" class="control-label">hobbies</label>
- -->			<textarea class="form-control" id="hobbies" name="hobbies" placeholder="hobbies" rows="4"></textarea>
-		</div>
-		<div class="col-md-4">
-<!-- 			<label for="notes" class="control-label">notes</label>
- -->			<textarea class="form-control" id="notes" name="notes" placeholder="notes" rows="4"></textarea>
-		</div>
+			<div class="col-md-4 d-flex justify-content-end align-items-end" id='famInfoButtons'>
+				<!-- <button class="btn btn-primary" id="addMember">Add Member</button> -->
+				<input type="button" class="btn btn-outline-secondary add-row-fam" value="Add member">
+				<a class="btn btn-primary" id="btn-accom" data-toggle="tab" href="#accomodations" role="tab">Next</a>
 
-		<div class="col-md-4 d-flex justify-content-end align-items-end" id='famInfoButtons'>
-			<button class="btn btn-primary" id="addMember">Add Member</button>
-			<a class="btn btn-primary" id="btn-accom" data-toggle="tab" href="#accomodations" role="tab">Next</a>
+			</div>
+
+
 
 		</div>
+	</form>
 
+<!-- TODO -->
+<!-- on move to fam info tab, enforce filling out fam info for main contact, then add to row -->
+<!-- TODO -->
+<!-- make phone list dynamic so additiona numbers can be added; maybe show as dropdown? -->
+	            
+	<table id="famMbrsTable">
+	    <thead>
+	        <tr>
+	            <th>Select</th>
+	            <th>First Name</th>
+	            <th>Last Name</th>
+	            <th>Preferred Name</th>
+	            <th>Phone</th>
+				<th>Gender</th>
+	            <th>Relationship</th>
+	            <th>Age</th>
+	            <th>Email</th>
+	            <th>Occupation</th>
+	            <th>Hobbies</th>
+	            <th>Notes</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+			<!-- table rows added dynamically -->
+	    </tbody>
+	    <tfoot>
+	    <tr>
+	    	<td><button type="button" class="edit-row-fam">Edit Row</button></td>
+	    	<td><button type="button" class="delete-row-fam">Delete Row</button></td>
+	    </tr>
+	    </tfoot>
+	</table>
 
+	<!-- <div class="form-group row d-flex justify-content-end"> -->
+			<!-- <button class="btn btn-primary" id="addMember">Add Member</button> -->
+		<!-- <a class="btn btn-primary" id="btn-accom" data-toggle="tab" href="#accomodations" role="tab">Next</a> -->
 
-	</div>
-
-	<!-- <div class="form-group row"> -->
-		<!-- <div class="col-md-3">
-			<button class="btn btn-primary" id="addMember">Add Member</button>
-			<a class="btn btn-primary" id="btn-accom" data-toggle="tab" href="#accomodations" role="tab">Next</a>
-
-		</div>
- -->
 	<!-- </div> -->
 
 </div>  <!-- /container -->

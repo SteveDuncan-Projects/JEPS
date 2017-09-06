@@ -1,73 +1,76 @@
-<h1>Pets Information</h1>
-<form id="petForm">
-	<div class="form-group row">
+<div class="container">
+	<h2>Pets Information</h2>
+	<form id="petForm">
+		<div class="form-group row">
 
-		<div class="col-md-2">
-			<!-- <label for="petType" class="control-label">Pet Type</label> -->
-			<select class="form-control" id="petType" name="petType">
-				<option value="pet-none">pet type</option>
-				<option value="cat">Cat</option>
-				<option value="chickens">Chickens</option>
-				<option value="small dog">Dog - small</option>
-				<option value="medium dog">Dog-medium</option>
-				<option value="large dog">Dog-large</option>
-				<option value="goats">Goats</option>
-				<option value="others">Others</option>
-			</select>
-		</div>
+			<div class="col-md-2">
+				<!-- <label for="petType" class="control-label">Pet Type</label> -->
+				<select class="form-control" id="petType" name="petType">
+					<option value="pet-none">pet type</option>
+					<option value="cat">Cat</option>
+					<option value="chickens">Chickens</option>
+					<option value="small dog">Dog - small</option>
+					<option value="medium dog">Dog-medium</option>
+					<option value="large dog">Dog-large</option>
+					<option value="goats">Goats</option>
+					<option value="others">Others</option>
+				</select>
+			</div>
 
-		<div class="col-md-2">
-			<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
-			<select class="form-control" id="petLives" name="petLives">
-				<option value="pet-none">pet lives</option>
-				<option value="indoor">Indoor</option>
-				<option value="outdoor">Outdoor</option>
-				<option value="both">Both</option>
-			</select>
-		</div>
+			<div class="col-md-2">
+				<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
+				<select class="form-control" id="petLives" name="petLives">
+					<option value="pet-none">pet lives</option>
+					<option value="indoor">Indoor</option>
+					<option value="outdoor">Outdoor</option>
+					<option value="both">Both</option>
+				</select>
+			</div>
 
-		<div class="col-md-2">
-			<!-- <label for="petName" class="control-label">Pet Name</label> -->
-			<input type="text" class="form-control" id="petName" name="petName" placeholder="pet's name">
-		</div>
+			<div class="col-md-2">
+				<!-- <label for="petName" class="control-label">Pet Name</label> -->
+				<input type="text" class="form-control" id="petName" name="petName" placeholder="pet's name">
+			</div>
 
-		<div class="col-md-4">
-			<!-- <label for="petNotes class="control-label>Notes</label> -->
-			<input type="text" class="form-control" id="petNotes" name="petNotes" placeholder="notes">
-		</div>
-		<div class="col-md-1">
-			<input type="button" class="btn btn-outline-secondary add-row" value="Add Row">
-		</div>
-	</div> <!-- /row -->
+			<div class="col-md-4">
+				<!-- <label for="petNotes class="control-label>Notes</label> -->
+				<input type="text" class="form-control" id="petNotes" name="petNotes" placeholder="notes">
+			</div>
+			<div class="col-md-1">
+				<input type="button" class="btn btn-outline-secondary add-row-pet" value="Add Pet">
+			</div>
+		</div> <!-- /row -->
 
-</form>
+	</form>
 
-<table id="petsTable">
-    <thead>
-        <tr>
-            <th>Select</th>
-            <th>Pet Type</th>
-            <th>Pet Lives</th>
-            <th>Pet Name</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-		<!-- table rows added dynamically -->
-    </tbody>
-    <tfoot>
-    <tr>
-    	<td><button type="button" class="delete-row">Delete Row</button></td>
-    </tr>
-    </tfoot>
-</table>
+	<table id="petsTable">
+	    <thead>
+	        <tr>
+	            <th>Select</th>
+	            <th>Pet Type</th>
+	            <th>Pet Lives</th>
+	            <th>Pet Name</th>
+	            <th>Notes</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+			<!-- table rows added dynamically -->
+	    </tbody>
+	    <tfoot>
+	    <tr>
+	    	<td><button type="button" class="edit-row-pet">Edit Row</button></td>
+	    	<td><button type="button" class="delete-row-pet">Delete Row</button></td>
+	    </tr>
+	    </tfoot>
+	</table>
 
 
 
-<div class="form-group row d-flex justify-content-end">
-	<!-- <div class="col-md-4"> -->
-	<button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
-	<!-- </div> -->
+	<div class="form-group row d-flex justify-content-end">
+		<!-- <div class="col-md-4"> -->
+		<button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
+		<!-- </div> -->
+	</div>
 </div>
 
 
