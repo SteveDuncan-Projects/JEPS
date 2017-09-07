@@ -37,18 +37,20 @@ $(document).ready(function(){
   AllowRowEdit();
 
 
-  $( "#hostFamilyForm" ).submit(function( e ) {
-    e.preventDefault();
-    alert( "Handler for .submit() called." );
+  // $( "#hostFamilyForm" ).submit(function( req, res ) {
+    // e.preventDefault();
+    // alert( "Handler for .submit() called." );
+    // alert("Form submit: " + req.method);
 
     // TODO: pass form elements to console to test; then connect to database
-    e.preventDefault();
-  });
-
-  // $("#btnHostFamSubmit").on("click", function(e){
-  //   // console.log(btnHostFamSubmit)
-  //   $( "#hostFamilyForm" ).submit();
+    // e.preventDefault();
   // });
+
+  $("#btnHostFamSubmit").on("click", function(){
+    // console.log(btnHostFamSubmit)
+    // $( "#hostFamilyForm" ).submit();
+    console.log("WTF???");
+  });
   
 }); // /document.ready   
 

@@ -1,3 +1,4 @@
+//import dependencies
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,27 +7,39 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
+//import routes
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+//create express application
 var app = express();
 
-// view engine setup
+//set path for views & static
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+//set up template engine to use
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use(logger('dev'));
+
+//set up bodyParser so we can get data from view form
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
+//define route middleware
 app.use('/', index);
+// app.use('/test', index);
 app.use('/users', users);
-// app.use('/apply', hostFamilyForm);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,5 +58,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
