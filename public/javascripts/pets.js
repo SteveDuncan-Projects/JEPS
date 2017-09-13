@@ -22,23 +22,25 @@ function AddPet() {
          return 'pets[' + petCount + '][' + val + ']';
     });
 
+
     // append clone to div and remove template & hidden classes
     clone.appendTo('.add-row-pet');
     $("div.add-row-pet > div").removeClass('pettemplate hidden');
-
+    // add class to div of row + incremented number
+	$("div.add-row-pet > div:last-child").addClass('row' + petCount);
     petCount++;
     return petCount;
   });
 }
 
 function DelPets() {
-  // Find and remove selected table rows
-  $(".delete-row-pet").click(function(){
-      $("#petsTable tbody").find('input[name="record"]').each(function(){
-        if($(this).is(":checked")){
-              $(this).parents("tr").remove();
-          }
-      });
-      // PetsTableState();
-  });
+	// Find and remove selected table rows
+	$(".deletePet").click(function(){
+		var a = this.name;
+		// get the value for this div and its elements
+		var index = a.substring(a.indexOf("[")+1,a.indexOf("]"));
+		//  delete the div
+		$('.row'+index).remove();	
+		
+	});
 }
