@@ -1,5 +1,5 @@
-$(document).ready(function(){
 
+$(document).ready(function(){
 
 
 (function() {
@@ -17,7 +17,7 @@ $(document).ready(function(){
 }());
 
   FamMbrsTableState();
-  PetsTableState();
+  // PetsTableState();
 
 
   //  TODO: gray out disabled tabs
@@ -28,29 +28,11 @@ $(document).ready(function(){
   // enable Next buttons to show tabs
   EnableNext();
 
-  AddPets();
-  DelPets();
 
   AddFamMember();
   DelFamMember();
 
   AllowRowEdit();
-
-
-  // $( "#hostFamilyForm" ).submit(function( req, res ) {
-    // e.preventDefault();
-    // alert( "Handler for .submit() called." );
-    // alert("Form submit: " + req.method);
-
-    // TODO: pass form elements to console to test; then connect to database
-    // e.preventDefault();
-  // });
-
-  $("#btnHostFamSubmit").on("click", function(){
-    // console.log(btnHostFamSubmit)
-    // $( "#hostFamilyForm" ).submit();
-    console.log("WTF???");
-  });
   
 }); // /document.ready   
 
@@ -62,15 +44,6 @@ function FamMbrsTableState() {
       $("#famMbrsTable").hide();
     } else {
       $("#famMbrsTable").show();
-    }
-  }
-
-  function PetsTableState() {
-    var rowCount = $('#petsTable tr').length-2;
-    if (rowCount===0) {
-      $("#petsTable").hide();
-    } else {
-      $("#petsTable").show();
     }
   }
 
@@ -96,39 +69,6 @@ function EnableNext() {
   });
 } 
 
-function AddPets() {
-   // dynamically render pets table
-  $(".add-row-pet").click(function(){
-    var petType = $("#petType").val();
-    var petLives = $("#petLives").val();
-    var petName = $("#petName").val();
-    var petNotes = $("#petNotes").val();
-    var markup = "<tr><td><input type='checkbox' name='record'></td><td>" 
-    + petType + "</td><td>" + petLives + "</td><td>" + petName + "</td><td>" 
-    + petNotes + "</td></tr>";
-    $("#petsTable tbody").append(markup);
-
-    PetsTableState();
-
-    //clear the form
-    $("#petType").prop("selectedIndex",0);
-    $("#petLives").prop("selectedIndex",0);
-    $("#petName").val("");
-    $("#petNotes").val("");
-  });
-}
-
-function DelPets() {
-  // Find and remove selected table rows
-  $(".delete-row-pet").click(function(){
-      $("#petsTable tbody").find('input[name="record"]').each(function(){
-        if($(this).is(":checked")){
-              $(this).parents("tr").remove();
-          }
-      });
-      PetsTableState();
-  });
-}
 
 function CopyUser() {
   // copy user information from User Info to Family Info tab
@@ -217,7 +157,6 @@ function AllowRowEdit() {
 // gray out disabled tabs
 // add Previous buttons
 // on click add row, clear fam form fields and reset form
-// left align table contents
 // phone field dynamic for multiple numbers
 // mask phone field for proper format
 // don't allow to add row if fields are blank

@@ -1,0 +1,85 @@
+<%- include ./partials/head.ejs %>
+
+<%- include ./partials/scripts.ejs %>
+
+
+<!-- <style type="text/css">
+	.pettemplate{
+		visibility: hidden;
+	}
+</style> -->
+
+<h1>Create Form Dynamically And Increment Value</h1>
+
+<!--
+=================
+First Div for the buttons. Click on the button to add field in the form.
+=================
+-->
+<div class="pettemplate form-group row">
+	<div class="col-md-2">
+
+
+
+	<!-- <input type="hidden" name="pets" value='hidden pet' id='pets'> -->
+
+		
+		<select class="form-control" id="petType" name='petType'>
+			<option value="pet-none">pet type</option>
+			<option value="cat">Cat</option>
+			<option value="chickens">Chickens</option>
+			<option value="small dog">Dog - small</option>
+			<option value="medium dog">Dog-medium</option>
+			<option value="large dog">Dog-large</option>
+			<option value="goats">Goats</option>
+			<option value="others">Others</option>
+		</select>
+	</div>
+
+	<div class="col-md-2">
+		<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
+		<select class="form-control" id="petLives" name="petLives">
+			<option value="pet-none">pet lives</option>
+			<option value="indoor">Indoor</option>
+			<option value="outdoor">Outdoor</option>
+			<option value="both">Both</option>
+		</select>
+	</div>
+
+	<div class="col-md-2">
+		<!-- <label for="petName" class="control-label">Pet Name</label> -->
+		<input type="text" class="form-control" id="petName" name="petName" placeholder="pet's name">
+	</div>
+
+	<div class="col-md-4">
+		<!-- <label for="petNotes class="control-label>Notes</label> -->
+		<input type="text" class="form-control" id="petNotes" name="petNotes" placeholder="notes">
+	</div>
+	<div class="col-md-1">
+		<input type="button" class="btn btn-outline-secondary addPet"  id="addPet" value="+">
+	</div>
+</div> <!-- /row -->
+<div class="add-row-pet">
+	
+</div> 	
+
+
+
+
+<!-- <div class="two">
+	<button class="name" onclick="textBoxCreate()">Name</button>
+	<button class="email" onclick="emailBoxCreate()">Email</button>
+	<button class="btn btn-secondary">+</button>
+</div>
+
+=================
+Form fields get added in the third div. Click on the button to add field in the form.
+=================
+
+<div class="third after-add-more">
+	<form action="" id="mainform" method="get" name="mainform">
+
+	<p id="myForm"></p><input type="submit" value="Submit">
+	</form>
+</div>
+ -->

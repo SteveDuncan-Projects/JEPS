@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
+require('./models/hostFamily');
 //import routes
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -21,24 +22,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 //set up template engine to use
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
+// import database connection
+require('./models/dbConfig.js');
+
+// uncomment after placing favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(logger('dev'));
 
 //set up bodyParser so we can get data from view form
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(expressValidator());
 app.use(cookieParser());
 
 //define route middleware
 app.use('/', index);
-// app.use('/test', index);
 app.use('/users', users);
-
-
 
 
 // catch 404 and forward to error handler
@@ -58,7 +59,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 module.exports = app;

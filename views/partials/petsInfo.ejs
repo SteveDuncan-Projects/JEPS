@@ -1,11 +1,22 @@
 <div class="container">
 	<h2>Pets Information</h2>
-	<form id="petForm">
-		<div class="form-group row">
-
+	<div id="petForm">
+	<!-- <div class="add-row-pet">
+		
+	</div>  -->
+	<!--  hidden template -->
+		<style type="text/css">
+			.hidden {
+				display: none;
+			}
+		</style>
+		<div class="pettemplate hidden form-group row">
 			<div class="col-md-2">
+
+		<!-- <input type="hidden" name="pets" value='hidden pet' id='pets'> -->
+
 				<!-- <label for="petType" class="control-label">Pet Type</label> -->
-				<select class="form-control" id="petType" name="petType">
+				<select class="form-control" id="petType" name='petType'>
 					<option value="pet-none">pet type</option>
 					<option value="cat">Cat</option>
 					<option value="chickens">Chickens</option>
@@ -37,13 +48,19 @@
 				<input type="text" class="form-control" id="petNotes" name="petNotes" placeholder="notes">
 			</div>
 			<div class="col-md-1">
-				<input type="button" class="btn btn-outline-secondary add-row-pet" value="Add Pet">
+				<input type="button" class="btn btn-outline-secondary  addPet" value="+">
+				<!-- add-row-pet -->
 			</div>
 		</div> <!-- /row -->
 
-	</form>
 
-	<table id="petsTable">
+	</div>
+
+	<div class="add-row-pet">
+		
+	</div> 
+	<input type="hidden" name="pets" id='pets[]' >
+	<!-- <table id="petsTable">
 	    <thead>
 	        <tr>
 	            <th>Select</th>
@@ -54,7 +71,7 @@
 	        </tr>
 	    </thead>
 	    <tbody>
-			<!-- table rows added dynamically -->
+			table rows added dynamically
 	    </tbody>
 	    <tfoot>
 	    <tr>
@@ -62,7 +79,7 @@
 	    	<td><button type="button" class="delete-row-pet">Delete Row</button></td>
 	    </tr>
 	    </tfoot>
-	</table>
+	</table> -->
 
 
 
@@ -70,5 +87,6 @@
 		<button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
 	</div>
 </div>
+
 
 

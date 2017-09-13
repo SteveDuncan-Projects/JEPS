@@ -1,104 +1,35 @@
 <%- include ../partials/head.ejs %>
 
 
-<!-- form user info -->
-<form class="container" action="/addHostFam" method="post" id="hostFamilyForm">
-
-
-<%- include ../partials/navTabs.ejs %>
-
-	<div class="tab-content card">
-		<!-- Panel 1 -->
-		<div class="tab-pane in show active" id="userInfo" role="tabpanel">
-			<%- include ../partials/userInfo.ejs %>
-		</div>
-		<!--/.Panel 1-->
-	    <!--Panel 2-->
-		<div class="tab-pane" id="familyInfo" role="tabpanel">
-
-			<%- include ../partials/familyInfo.ejs %>
-			
-		</div>
-
-	    <!--/.Panel 2-->
-	    <!--Panel 3-->
-	    <div class="tab-pane" id="accomodations" role="tabpanel">
-			<%- include ../partials/accomodations.ejs %>
-		</div>
-		<!--/.Panel 3-->
-
-		<!--Panel 4-->
-	    <div class="tab-pane" id="petsInfo" role="tabpanel">
-			<%- include ../partials/petsInfo.ejs %>
-		</div>
-		<!--/.Panel 4-->
-
-<!-- 		<div class="form-group">
-			<a href="familyInfo" class="btn btn-primary">Next</a>
-		</div>     --> 
-	</div>	
-</form>	
-<!-- /form user info -->
-
 <%- include ../partials/scripts.ejs %>
 
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
 
+<form class="container" action="/addHostFam" method="post" id="hostFamilyForm">
 
-<!-- <form class="container" id="needs-validation" novalidate>
-	<div class="row">
-		<div class="col-md-6 mb-3">
-			<label for="validationCustom01">First name</label>
-			<input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
-		</div>
-		<div class="col-md-6 mb-3">
-			<label for="validationCustom02">Last name</label>
-			<input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
-		</div>
-	</div>
+  <div id="tabs">
+    <%- include ../partials/navTabs.ejs %>
 
-	<div class="row">
-		<div class="col-md-6 mb-3">
-			<label for="validationCustom03">City</label>
-			<input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-			<div class="invalid-feedback">
-				Please provide a valid city.
-			</div>
-		</div>
+    <div id="userInfo">
+      <%- include ../partials/userInfo.ejs %>
+    </div>
+    <div id="familyInfo">
+      <%- include ../partials/familyInfo.ejs %>
+    </div>
+    <div id="accomodations">
+      <%- include ../partials/accomodations.ejs %>
+    </div>
+    <div id="petsInfo">
+      <%- include ../partials/petsInfo.ejs %>
+    </div>
 
+  </div>
 
-	    <div class="col-md-3 mb-3">
-			<label for="validationCustom04">State</label>
-			<input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-			<div class="invalid-feedback">
-				Please provide a valid state.
-			</div>
-	    </div>
-
-		<div class="col-md-3 mb-3">
-			<label for="validationCustom05">Zip</label>
-			<input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-			<div class="invalid-feedback">
-				Please provide a valid zip.
-			</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-6 mb-3">
-			<label for="validationCustom02">Last name</label>
-			<input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
-		</div>
-	</div> -->
-
-<!-- 	<div class="row">
-		<div class="col-md-6 mb-3">
-			<label for="validationCustom06">Email</label>
-			<input type="email" class="form-control" id="validationCustom06" placeholder="Email" required>
-		</div>
-	</div> -->
+</form>
 
  
-	
-
-<!-- </form> -->
-
-
+ 
