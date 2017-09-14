@@ -46,7 +46,7 @@ td {
 	margin-left: 0;
 	margin-right: 0;
 }
-.col-md-4, .col-md-2 {
+.col-md-6, .col-md-4, .col-md-2,  .col-md-3 {
 	padding-left: 0 !important;
 	padding-right: 0;
 }
@@ -54,12 +54,17 @@ td {
 	margin: 2rem 0 0 1em;
 }
 
+
+.none {
+	display: none;
+}
+
 .hidden {
 	visibility: hidden;
 }
-.visible {
+/*.visible {
 	visibility: visible;
-}
+}*/
 .tab-pane {
 	background-color: silver;
 }
@@ -105,3 +110,6 @@ h1 {
 
 }
 
+.phone-input{
+	margin-bottom:8px;
+}

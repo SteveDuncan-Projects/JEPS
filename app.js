@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
-require('./models/hostFamily');
+require('./models/hostFamilyModel');
 //import routes
 var index = require('./routes/index');
 var users = require('./routes/users');

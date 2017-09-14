@@ -14,17 +14,20 @@
   <div id="tabs">
     <%- include ../partials/navTabs.ejs %>
 
-    <div id="userInfo">
-      <%- include ../partials/userInfo.ejs %>
-    </div>
+
     <div id="familyInfo">
       <%- include ../partials/familyInfo.ejs %>
     </div>
+
     <div id="accomodations">
       <%- include ../partials/accomodations.ejs %>
     </div>
+    
     <div id="petsInfo">
       <%- include ../partials/petsInfo.ejs %>
+        <div class="form-group row d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
+        </div>
     </div>
 
   </div>

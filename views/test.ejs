@@ -64,22 +64,41 @@ First Div for the buttons. Click on the button to add field in the form.
 </div> 	
 
 
+<div class="form-group row">
+	<div class="col-md-2">
+		<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
+		<select class="form-control" id="phone" name="phone">
+			<option value="#">phone</option>
+			<option value="mobile">mobile</option>
+			<option value="home">home</option>
+			<option value="work">work</option>
+		</select>
+	</div>
 
-
-<!-- <div class="two">
-	<button class="name" onclick="textBoxCreate()">Name</button>
-	<button class="email" onclick="emailBoxCreate()">Email</button>
-	<button class="btn btn-secondary">+</button>
+	<div class="col-md-2">
+		<input type="text" class="form-control hidden" id="mobile" placeholder="mobile">
+		<input type="text" class="form-control hidden" id="home" placeholder="home">
+		<input type="text" class="form-control hidden" id="work" placeholder="work">
+	</div>
 </div>
 
-=================
-Form fields get added in the third div. Click on the button to add field in the form.
-=================
 
-<div class="third after-add-more">
-	<form action="" id="mainform" method="get" name="mainform">
 
-	<p id="myForm"></p><input type="submit" value="Submit">
-	</form>
-</div>
- -->
+<script type="text/javascript">
+	$("#phone").change(function () {
+		// alert("phone type selected" + $(this).val());
+		
+		phoneType = $(this).val();
+
+		
+		$('input:not(#phoneType)').addClass("hidden");
+		
+		$('#' + phoneType).removeClass('hidden');
+		// var numInputs = $(this).val();
+		// for (var i = 0; i < numInputs; i++) {
+		// 	// $("#inputArea").append('<input name="inputs[]" />');
+		// 	console.log($(this));
+		// }
+	});
+
+</script>

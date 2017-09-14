@@ -75,3 +75,10 @@ function AddPet() {
 
 }
 
+$('.dropdown-menu input').click(function (e) {
+     e.stopPropagation();
+ });
+$('.dropdown-menu li').click(function(){
+ 
+$('.dropdown-toggle b').remove().appendTo($('.dropdown-toggle').text($(this).text()));
+});

@@ -9,7 +9,8 @@ module.exports.addHostFam = function(req, res) {
 		
 		hostFamily: {
 			address: {
-			street: req.body.address,
+			street: req.body.street,
+			street2: req.body.street2,
 			city: req.body.city,
 			state: req.body.state,
 			zip: req.body.zip
@@ -22,12 +23,18 @@ module.exports.addHostFam = function(req, res) {
 				},
 				email: req.body.email,
 				relationship: req.body.relationship,
+				phone: {
+					mobile: req.body.mobile,
+					home: req.body.home,
+					work: req.body.work
+				},
 				age: req.body.age,
 				gender: req.body.gender,
 				occupation: req.body.occupation,
 				hobbies: req.body.hobbies,
 				notes: req.body.notes
 			},
+					
 			pets: req.body.pets
 			
 			// {N

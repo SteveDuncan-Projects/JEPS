@@ -1,36 +1,85 @@
-
-
-<!-- TODO -->
-<!-- functionality to add additional family members; push to array before submitting form -->
 <div class="container">
 	<h2>Host Family Members</h2>
 	<form id="famInfoForm">
 		<div class="form-group row">
 			<div class="col-md-4">
 	<!-- 			<label for="firstNameFam" class="control-label">First Name</label>
-	 -->			<input type="text" class="form-control" id="firstNameFam" name="firstNameFam" placeholder="first name">
+	 -->			<input type="text" class="form-control" id="firstName" name="firstName" placeholder="first name">
 
 			</div>
 
 			<div class="col-md-4">
 	<!-- 			<label for="lastNameFam" class="control-label">Last Name</label>
-	 -->			<input type="text" class="form-control" id="lastNameFam" name="lastNameFam" placeholder="last name">
+	 -->			<input type="text" class="form-control" id="lastName" name="lastName" placeholder="last name">
 
 			</div>
 
 			<div class="col-md-4">
 	<!-- 			<label for="prefName" class="control-label">Preferred Name</label>
-	 -->			<input type="text" class="form-control" id="prefNameFam" name="prefNameFam" placeholder="preferred name">
+	 -->			<input type="text" class="form-control" id="prefName" name="prefName" placeholder="preferred name">
 			</div>
 		</div>
 
-		<div class="form-group row">
-			<div class="col-md-2">
-	<!-- 			<label for="phone" class="control-label">phone</label>
-	 -->			<input type="tel" class="form-control" id="phone" name="phone" placeholder="phone">
+		<div class="form-group row"> <!-- Street 1 -->
+			<div class="col-md-6">
+			<!-- <label for="street1_id" class="control-label">Street Address 1</label> -->
+				<input type="text" class="required form-control" id="address" name="street" placeholder="Street address, P.O. box, company name, c/o">
 			</div>
-			<!-- TODO -->
-				<!-- make phone input able to add additional numbers and mark as cell/home/work -->
+			<div class="col-md-6"> <!-- Street 2 -->
+				<!-- <label for="street2_id" class="control-label">Street Address 2</label> -->
+				<input type="text" class="form-control" id="address_2" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+			</div>	
+		</div>					
+							
+	
+
+		<div class="form-group row"> <!-- City-->
+			<div class="col-md-4">
+		<!-- 		<label for="city_id" class="control-label">City</label>
+		 -->		<input type="text" class="required form-control" id="city" name="city" placeholder="city">
+
+			</div>
+			<div class="col-md-3">
+		<!-- 		<label for="state_id" class="control-label">State</label>
+		 -->		<select class="required form-control" name='state' id="state">			
+					<option value="OR">Oregon</option>			
+					<option value="WA">Washington</option>
+				</select>
+						
+			</div>
+			<div class="col-md-2">
+		<!-- 		<label for="zip" class="control-label">Zip Code</label>
+		 -->		<input type="text" class="required form-control" id="zip" name="zip" placeholder="zip code">
+			</div>
+
+			<div class="col-md-3">
+	<!-- 			<label for="email" class="control-label">email</label>
+	 -->			<input type="email" class="form-control" id="email" name="email" placeholder="email">
+			</div>
+
+		</div>
+
+
+		<div class="form-group row">
+
+			<div class="col-md-2">
+				<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
+				<select class="form-control" id="phone" name="phone">
+					<option value="#">phone</option>
+					<option value="mobile">mobile</option>
+					<option value="home">home</option>
+					<option value="work">work</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<input type="text" class="form-control hidden">
+				<input type="text" class="form-control phone none" id="mobile" name="mobile" placeholder="mobile">
+				<input type="text" class="form-control phone none" id="home" name="home" placeholder="home">
+				<input type="text" class="form-control phone none" id="work" name="work" placeholder="work">
+			</div>
+
+
 			<div class="col-md-2">
 	<!-- 			<label for="gender" class="control-label">gender</label>
 	 -->			<select class="form-control" id="gender" name="gender" placeholder="gender">
@@ -65,10 +114,10 @@
 	<!-- 			<label for="age" class="control-label">age</label>
 	 -->			<input type="tel" class="form-control" id="age" name="age" placeholder="age">
 			</div>
-			<div class="col-md-2">
-	<!-- 			<label for="email" class="control-label">email</label>
-	 -->			<input type="email" class="form-control" id="emailFam" name="emailFam" placeholder="email">
-			</div>
+			
+
+	
+
 			<div class="col-md-2">
 	<!-- 			<label for="occupation" class="control-label">occupation</label>
 	 -->			<input type="text" class="form-control" id="occupation" name="occupation" placeholder="occupation">
@@ -141,49 +190,4 @@
 
 
 
-<!-- 		<div class="form-group row">
-			<div class="col-md-4">
-				<label for="email" class="control-label">Email</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="email" required>
 
-			</div>
-			<div class="col-md-4">
-				<label for="verifyEmail" class="control-label">Verify Email</label>
-				<input type="email" class="form-control" id="verifyEmail" name="verifyEmail" placeholder="verify email">
-			</div>
-		</div>	
-
-		<div class="form-group">
-			<label for="street1_id" class="control-label">Street Address 1</label>
-			<input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o" required>
-
-		</div>					
-								
-		<div class="form-group">
-			<label for="street2_id" class="control-label">Street Address 2</label>
-			<input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
-		</div>	
-
-		<div class="form-group row">
-			<div class="col-md-4">
-				<label for="city_id" class="control-label">City</label>
-				<input type="text" class="form-control" id="city_id" name="city" placeholder="city" required>
-
-			</div>
-			<div class="col-md-4">
-				<label for="state_id" class="control-label">State</label>
-				<select class="form-control" id="state_id">			
-					<option value="OR">Oregon</option>			
-					<option value="WA">Washington</option>
-				</select>
-						
-			</div>
-			<div class="col-md-4">
-				<label for="zip" class="control-label">Zip Code</label>
-				<input type="text" class="form-control" id="zip" name="zip" placeholder="#####" required>
-
-			</div> -->
-<!-- 		<a class="btn btn-primary" data-toggle="tab" href="#accomodations" role="tab">Next</a>
-
-</div>
- -->

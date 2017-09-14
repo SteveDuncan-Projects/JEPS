@@ -7,7 +7,7 @@ var HostFamilySchema = new mongoose.Schema( {
 	 hostFamily: {  //change to array?
 	 	address: {
 			street: String,
-			addr2: String,
+			street2: String,
 			city: String,
 			state: String,
 			zip: String
@@ -21,11 +21,11 @@ var HostFamilySchema = new mongoose.Schema( {
 		// },
 			email: String,
 			relationship: String,
-	// 	phone: {
-	// 		mobile: String,
-	// 		home: String,
-	// 		work: String
-	// 	},
+		phone: {
+			mobile: String,
+			home: String,
+			work: String
+		},
 			age: Number,
 			gender: String,
 			occupation: String,
