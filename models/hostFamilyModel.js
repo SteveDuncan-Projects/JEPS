@@ -12,27 +12,28 @@ var HostFamilySchema = new mongoose.Schema( {
 			state: String,
 			zip: String
 		},
-		familyMbr: [{
-			name: {
-				first: String,
-				last: String,
-				pref: String
-			},
+		// familyMbr: [{
+		// 	name: {
+		// 		first: String,
+		// 		last: String,
+		// 		pref: String
+		// 	},
+		// // },
+		// 	email: String,
+		// 	relationship: String,
+		// phone: {
+		// 	mobile: String,
+		// 	home: String,
+		// 	work: String
 		// },
-			email: String,
-			relationship: String,
-		phone: {
-			mobile: String,
-			home: String,
-			work: String
-		},
-			age: Number,
-			gender: String,
-			occupation: String,
-			hobbies: [String],
-			notes: String
-		}],
-		pets: {},
+		// 	age: Number,
+		// 	gender: String,
+		// 	occupation: String,
+		// 	hobbies: [String],
+		// 	notes: String
+		famMbrs: {},
+		// }]
+		pets: {}
 
 		// address: {
 		// 	street: String,

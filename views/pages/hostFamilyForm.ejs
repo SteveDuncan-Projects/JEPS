@@ -1,7 +1,6 @@
+<!-- This is the main data entry form for host family application -->
+
 <%- include ../partials/head.ejs %>
-
-
-<%- include ../partials/scripts.ejs %>
 
   <script>
   $( function() {
@@ -10,7 +9,7 @@
   </script>
 
 <form class="container" action="/addHostFam" method="post" id="hostFamilyForm">
-
+<!-- These includes are the panels to be shown when selected from navTabs.ejs -->
   <div id="tabs">
     <%- include ../partials/navTabs.ejs %>
 
@@ -24,7 +23,7 @@
     </div>
     
     <div id="petsInfo">
-      <%- include ../partials/petsInfo.ejs %>
+      <%- include ../partials/pets.ejs %>
         <div class="form-group row d-flex justify-content-end">
           <button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
         </div>

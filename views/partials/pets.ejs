@@ -1,17 +1,9 @@
 <div class="container">
 	<h2>Pets Information</h2>
 	<div id="petForm">
-
-	<!--  hidden template for dynamically adding rows -->
-		<style type="text/css">
-			.hidden {
-				display: none;
-			}
-		</style>
-
-		<div class="pettemplate hidden form-group row">
+		<!--  hidden template for dynamically adding rows -->
+		<div class="pettemplate none form-group row">
 			<div class="col-md-2">
-				<!-- <label for="petType" class="control-label">Pet Type</label> -->
 				<select class="form-control" id="petType" name='petType'>
 					<option value="pet-none">pet type</option>
 					<option value="cat">Cat</option>
@@ -25,7 +17,6 @@
 			</div>
 
 			<div class="col-md-2">
-				<!-- <label for="petLives" class="control-label">Pet Lives</label> -->
 				<select class="form-control" id="petLives" name="petLives">
 					<option value="pet-none">pet lives</option>
 					<option value="indoor">Indoor</option>
@@ -35,12 +26,10 @@
 			</div>
 
 			<div class="col-md-2">
-				<!-- <label for="petName" class="control-label">Pet Name</label> -->
 				<input type="text" class="form-control" id="petName" name="petName" placeholder="pet's name">
 			</div>
 
 			<div class="col-md-4">
-				<!-- <label for="petNotes class="control-label>Notes</label> -->
 				<input type="text" class="form-control" id="petNotes" name="petNotes" placeholder="notes">
 			</div>
 			<div class="col-md-2">
@@ -48,19 +37,15 @@
 				<input type="button" class="btn btn-outline-secondary  deletePet" value="-">
 			</div>
 		</div> <!-- /hidden template -->
-
-
 	</div>
 
 	<div class="add-row-pet">
 		<!-- inputs dynamically rendered here; pets.js copies from hidden template above -->
-	</div> 
+	</div>
+
+	<!-- hidden field to hold multiple values to be entered into database array -->
 	<input type="hidden" name="pets" id='pets[]' >
 
-
-<!-- 	<div class="form-group row d-flex justify-content-end">
-		<button type="submit" class="btn btn-primary" id="btnHostFamSubmit">Submit</button>
-	</div> -->
 </div>
 
 

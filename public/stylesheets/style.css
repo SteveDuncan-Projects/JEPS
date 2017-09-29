@@ -106,10 +106,27 @@ h1 {
 }
 
 #tabs .container {
-	padding: 1rem;
+	/*padding: 1rem;*/
 
 }
 
 .phone-input{
 	margin-bottom:8px;
 }
+
+.add-row-fam .form-group {
+	margin-bottom: 0;
+}
+/*.input-sm {
+	padding: 0;
+}
+span {
+}
+.add-row-fam select, .add-row-fam  textarea {
+	height: 1.4rem !important;
+	padding: 0;
+}
+.add-row-fam .addMbr, .add-row-fam .deleteMbr {
+	padding-top: 0;
+	padding-bottom: 0;
+}*/

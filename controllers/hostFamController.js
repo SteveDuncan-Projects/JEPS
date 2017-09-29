@@ -4,53 +4,51 @@ var HostFam = mongoose.model('HostFamily');
 
 module.exports.addHostFam = function(req, res) {
 
-	// get input from submitted form
+	console.log('get input from submitted form');
 	var newfam = new HostFam ({
-		
+
+		// TODO: use loop to get values from hidden fields instead of sending all fields?
+		// the idea is to prevent unnecessary data being copied into database
 		hostFamily: {
 			address: {
-			street: req.body.street,
-			street2: req.body.street2,
-			city: req.body.city,
-			state: req.body.state,
-			zip: req.body.zip
+				street: req.body.street,
+				street2: req.body.street2,
+				city: req.body.city,
+				state: req.body.state,
+				zip: req.body.zip
 			},
-			familyMbr: {
-				name: {
-					first: req.body.firstName,
-					last: req.body.lastName,
-					pref: req.body.prefName
-				},
-				email: req.body.email,
-				relationship: req.body.relationship,
-				phone: {
-					mobile: req.body.mobile,
-					home: req.body.home,
-					work: req.body.work
-				},
-				age: req.body.age,
-				gender: req.body.gender,
-				occupation: req.body.occupation,
-				hobbies: req.body.hobbies,
-				notes: req.body.notes
-			},
-					
+			// familyMbr: {
+			// 	name: {
+			// 		first: req.body.firstName,
+			// 		last: req.body.lastName,
+			// 		pref: req.body.prefName
+			// 	},
+			// 	email: req.body.email,
+			// 	relationship: req.body.relationship,
+			// 	phone: {
+			// 		mobile: req.body.mobile,
+			// 		home: req.body.home,
+			// 		work: req.body.work
+			// 	},
+			// 	age: req.body.age,
+			// 	gender: req.body.gender,
+			// 	occupation: req.body.occupation,
+			// 	hobbies: req.body.hobbies,
+			// 	notes: req.body.notes
+			// },
+			famMbrs: req.body.famMbrs,		
 			pets: req.body.pets
-			
-			// {N
-			// 	kind: req.body.pets,
-			// 	lives: req.body.pets,
-			// 	name: req.body.pets,
-			// 	notes: req.body.pets
-			// }
 
 		}	
 	});
-	console.log(newfam);
-	newfam.save();
 
-	// console.log("New record added");
-	// res.send('Form submitted from hostFam controller! Request method: ' + req.method);
+	console.log(newfam);
+	// save form input to database
+	newfam.save(function(err) {
+		if (err) return handleError(err);
+	});
+
+	// send output to browser; 
 	res.send(newfam);
 };
 

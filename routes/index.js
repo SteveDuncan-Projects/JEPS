@@ -12,10 +12,10 @@ router.get('/', ctrlMain.index);
 
 router.post('/addHostFam', ctrlHostFam.addHostFam);
 // router.post('/addHostFam', function(req, res) {
-// 	console.log("Route: addHostFam");
+	// console.log("Route: addHostFam");
 // 	console.log(req.body);
 // 	// TODO: call a controller from here?
-// 	res.send('Form submitted! Request method: ' + req.method);
+	// res.send('Form submitted! Request method: ' + req.method);
 // 	// res.send('Request received!');
 // });
 

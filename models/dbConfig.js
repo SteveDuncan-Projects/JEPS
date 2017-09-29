@@ -4,7 +4,10 @@ var gracefulShutdown;
 // define database connection string
 var dbURI = 'mongodb://localhost/hostfam';
 // open a mongoose connection at application startup
-mongoose.connect(dbURI);
+// mongoose.connect(dbURI);
+var promise = mongoose.connect(dbURI, {
+	useMongoClient: true,
+});
 
 // monitor connection status
 mongoose.connection.on('connected', function() {

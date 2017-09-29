@@ -25,7 +25,7 @@ function AddPet() {
 
     // append clone to div and remove template & hidden classes
     clone.appendTo('.add-row-pet');
-    $("div.add-row-pet > div").removeClass('pettemplate hidden');
+    $("div.add-row-pet > div").removeClass('pettemplate none');
     // add class to div of row + incremented number
 	$("div.add-row-pet > div:last-child").addClass('row' + petCount);
     petCount++;

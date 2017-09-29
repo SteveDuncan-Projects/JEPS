@@ -1,0 +1,86 @@
+<div class="container">
+<!-- This page contains information for each family member; there may be multiple members for each host family record -->
+	<div id="famForm">
+		<h2 class='none'>Family Members</h2>
+		<!--  hidden template for dynamically adding rows -->
+		<div class="famMbrTemplate none">
+			<div class="form-group row">	
+				<span>
+					<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+				</span>
+				 <span>			
+				 	<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+				 </span>
+				<span><input type="text" class="form-control" id="prefName" name="prefName" placeholder="Preferred Name"></span>
+
+				<span>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email"></span>
+				<span>
+					<select class="form-control" id="relationship" name="relationship" placeholder="Relationship">
+						<option value="#" checked>relationship</option>
+						<option value="mainContact">Main Contact</option>
+						<option value="spouse">Spouse</option>
+						<option value="father">Father</option>
+						<option value="mother">Mother</option>
+						<option value="grandfather">Grandfather</option>
+						<option value="grandmother">Male</option>
+						<option value="son">Son</option>
+						<option value="daughter">Daughter</option>
+						<option value="brother">Brother</option>
+						<option value="sister">Sister</option>
+						<option value="grandson">Grandson</option>
+						<option value="granddaughter">Granddaughter</option>
+						<option value="otherRelative">Other Relative</option>
+						<option value="friend">Friend</option>
+						<option value="other">Other</option>
+					</select>
+				</span>
+				<span>
+					<select class="form-control phoneSelector" id="phone" name="phone">
+						<option value="#">phone</option>
+						<option value="mobile">mobile</option>
+						<option value="home">home</option>
+						<option value="work">work</option>
+					</select>
+				</span>
+				<span>
+					<input type="text" class="form-control none form-control-sm">
+					<input type="tel" class="form-control phone none" id="mobile" name="mobile" placeholder="mobile">
+					<input type="tel" class="form-control phone none" id="home" name="home" placeholder="home">
+					<input type="tel" class="form-control phone none" id="work" name="work" placeholder="work">
+				</span>
+			</div>
+			<div class="form-group row">
+				<span>
+					<select class="form-control" id="gender" name="gender" placeholder="gender">
+						<option value="#" checked>gender</option>
+						<option value="male">male</option>
+						<option value="female">female</option>
+					</select>
+				</span>
+				
+				<span><input type="text" class="form-control" id="age" name="age" placeholder="age"></span>
+				<span><input type="text" class="form-control" id="occupation" name="occupation" placeholder="occupation"></span>
+			<div class="form-group row">
+				<span><textarea class="form-control" id="hobbies" name="hobbies" rows="4"></textarea></span>
+				<span><textarea class="form-control" id="notes" name="notes" rows="4"></textarea></span>
+				<span><input type="button" class="btn btn-outline-secondary addMbr" value="+">
+					<input type="button" class="btn btn-outline-secondary deleteMbr" value="-">
+				</span>
+			</div>
+		</div> <!-- /hidden template -->
+	</div> <!-- /.famForm -->
+
+	<div class="add-row-fam">
+		<!-- inputs dynamically rendered here; famMbrs.js copies from hidden template above -->
+	</div>
+
+	<!-- hidden fields to hold multiple values to be entered into database array -->
+	<input type="hidden" name="phones[]" id='phones[]' >
+	<input type="hidden" name="famMbrs[]" id='famMbrs[][]' >
+
+	</div> <!-- /#famForm -->
+</div>
+
+
+
