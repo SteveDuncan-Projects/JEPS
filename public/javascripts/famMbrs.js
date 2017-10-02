@@ -36,6 +36,10 @@ function AddFamMbr() {
     mbrCount++;
     return mbrCount;
   });
+
+  $('#btnMbrDone').on('click', function() {
+    location.href = '#accomodations';
+  });
 }
 
 

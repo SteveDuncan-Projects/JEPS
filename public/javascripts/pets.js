@@ -9,7 +9,8 @@ var petCount = 0;
 
 function AddPet() {
 	// call from tab click or button click
-  $('.addPet').add('#hostFamNav a[href="#petsInfo"').click(function() {
+  // $('.addPet').add('#hostFamNav a[href="#petsInfo"').click(function() {
+  $('.addPet').click(function() {
 
 	// copy input row from hidden div 
   	clone = $('.pettemplate').clone(true);
@@ -26,6 +27,9 @@ function AddPet() {
     // append clone to div and remove template & hidden classes
     clone.appendTo('.add-row-pet');
     $("div.add-row-pet > div").removeClass('pettemplate none');
+
+    $('.add-row-pet .form-control').addClass('form-control-sm');
+
     // add class to div of row + incremented number
 	$("div.add-row-pet > div:last-child").addClass('row' + petCount);
     petCount++;

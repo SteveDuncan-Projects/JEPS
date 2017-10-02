@@ -4,7 +4,7 @@ var HostFam = mongoose.model('HostFamily');
 
 module.exports.addHostFam = function(req, res) {
 
-	console.log('get input from submitted form');
+	
 	var newfam = new HostFam ({
 
 		// TODO: use loop to get values from hidden fields instead of sending all fields?
@@ -36,7 +36,22 @@ module.exports.addHostFam = function(req, res) {
 			// 	hobbies: req.body.hobbies,
 			// 	notes: req.body.notes
 			// },
-			famMbrs: req.body.famMbrs,		
+			famMbrs: req.body.famMbrs,
+			accomodations: {
+				bedroom: req.body.bedroom,
+				bathroom: req.body.bathroom,
+				genderPref: req.body.genderPref,
+				religiousOK: req.body.religion,
+				dietOK: req.body.diet,
+				multiGuestsOK: req.body.guests,
+				otherProgsOK: req.body.otherProgs,
+				returnTime: req.body.curfew,
+				// commuteType: req.body.,
+				line: req.body.busLine,
+				tickets: req.body.tickets,
+				commuteTime: req.body.commuteTime,
+				notes: req.body.commuteNotes
+			},	
 			pets: req.body.pets
 
 		}	

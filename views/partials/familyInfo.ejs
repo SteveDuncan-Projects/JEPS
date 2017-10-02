@@ -28,19 +28,39 @@
 			<div class="col-md-2">
 				<input type="text" class="required form-control" id="zip" name="zip" placeholder="zip code">
 			</div>
-			<div class="col-md-2">
-				<input type="button" class="btn btn-primary addMbr" value="Add family member">
-			</div>
+			<!-- <div class=""> -->
+				<!-- <input type="button" class="btn btn-outline-success addMbr" value="Add family member"> -->
+				<!-- <input type="button" class="btn btn-success btn-accom" id="btnMbrDone" value="Done"> -->
+				<!-- <a class="btn btn-success" id="" data-toggle="tab" href="#accomodations" role="tab">Done</a> -->
+				<!-- <a class="btn btn-outline-primary btn-accom" id="" data-toggle="tab" href="#accomodations" role="tab">Next</a> -->
+
+
+			<!-- </div> -->
 		</div>
 
 	</div> <!-- /.famInfoForm -->
 
 	<%- include ../partials/famMbrs.ejs %>
-    
+
 
 
 </div>  <!-- /.container -->
 
+<div class="form-group row d-flex justify-content-end">
+
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination justify-content-end">
+	    <li class="page-item mr-1">
+	      <a class="page-link btnCancel" href="#" tabindex="-1">Cancel</a>
+	    </li>
+	    <li class="page-item mr-1"><a class="page-link addMbr" href="#">Add family member</a></li>
+		<li class="page-item">
+	      <a class="page-link btn-accom">Next</a>
+	    </li>
+	  </ul>
+	</nav>
+
+</div>
 
 
 

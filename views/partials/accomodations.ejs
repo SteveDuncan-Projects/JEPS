@@ -21,7 +21,7 @@
 			<!-- </div> -->
 			<!-- <div class="row"> -->
 				<!-- <label for="gender-pref" class="mt-2">Student gender preference</label> -->
-				<select name="gender-pref" id="gender-pref" class="btn btn-outline-secondary">
+				<select name="genderPref" id="gender-pref" class="btn btn-outline-secondary">
 					<option value="either">Student gender preference</option>
 					<option value="either">either</option>
 					<option value="male">male</option>
@@ -30,28 +30,32 @@
 			<!-- </div> -->
 		</div> <!-- /column 1 -->
 
-		<div class="col-md-4"> <!-- column 2 -->
+		<div class="col-md-4" id="accomBoxes"> <!-- column 2 -->
 			<div class="form-check">
 			  <label class="form-check-label">
-			    <input class="form-check-input" type="checkbox" name="religion" id="religion" value="religion">
+			    <input class="form-check-input" type="checkbox" name="religion_box" id="religion">
+			    <input type="hidden" name="religion" value="0">
 			    Religious orientation OK?
 			  </label>
 			</div>
 			<div class="form-check">
 			  <label class="form-check-label">
-			    <input class="form-check-input" type="checkbox" name="diet" id="diet" value="diet">
+			    <input class="form-check-input" type="checkbox" name="diet_box" id="diet">
+			    <input type="hidden" name="diet" value="0">
 			    Dietary Requirements OK?
 			  </label>
 			</div>
 			<div class="form-check">
 			  <label class="form-check-label">
-			    <input class="form-check-input" type="checkbox" name="guests" id="guests" value="guests">
+			    <input class="form-check-input" type="checkbox" name="guests_box" id="guests">
+			    <input type="hidden" name="guests" value="0">
 			    Two Guests OK?
 			  </label>
 			</div>
 			<div class="form-check">
 			  <label class="form-check-label">
-			    <input class="form-check-input" type="checkbox" name="otherProgs" id="otherProgs" value="otherProgs">
+			    <input class="form-check-input" type="checkbox" name="otherProgs_box" id="otherProgs">
+			    <input type="hidden" name="otherProgs" value="0">
 			    Hosting Other Programs OK?
 			  </label>
 			</div>
@@ -96,66 +100,26 @@
 
 		</div> <!-- /column 3 -->
 	</div> <!-- /row -->
-	<div class="form-group row d-flex justify-content-end"">
-		<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
-	</div>
+<!-- 	<div class="form-group row d-flex justify-content-end"">
+		<a class="btn btn-outline-info btn-fam-info mr-1" data-toggle="tab" role="tab">Back</a>
+		<a class="btn btn-outline-primary btn-pets" data-toggle="tab" role="tab">Next</a>
+	</div> -->
 </div> <!-- /container -->
 
-<!-- <script type="text/javascript">
-    $(function () {
-        $('#lstFruits').multiselect({
-            includeSelectAllOption: true
-        });
-    });
-</script> -->
 
-<!-- ////////////////////////////////////////// -->
+<div class="form-group row d-flex justify-content-end">
 
-<!-- The below works -->
-	<!-- button to next tab -->
-<!-- 	<div class="form-group row">
-		<div class="col-md-3">
-			<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination justify-content-end">
+	    <li class="page-item mr-1">
+	      <a class="page-link btnFamInfo" href="#" tabindex="-1">Back</a>
+	    </li>
 
-		</div>
-	</div>
+		<li class="page-item">
+	      <a class="page-link btn-pets">Next</a>
+	    </li>
+	  </ul>
+	</nav>
 
+</div>
 
-		<div class="col-md-3  px-0">
-		<div class="d-inline-flex justify-content-around align-items-center w-100">
-			<label for="bathroom" class="mt-2">Bathroom: </label>
-			<select name="bedroom" id="bedroom">
-				<option value="private">Private</option>
-				<option value="shared">Shared</option>
-			</select>
-		</div>
-
-		<div class="d-inline-flex justify-content-around align-items-center w-100">
-			<label for="bathroom" class="mt-2">Bathroom</label>
-			<select name="bathroom" id="bathroom">
-				<option value="private">Private</option>
-				<option value="shared">Shared</option>
-			</select>
-		</div>
-	</div>
-
-	<div class="col-md-3 px-0">
-		<div class="d-inline-flex justify-content-around align-items-center w-100">
-			<label for="gender-pref" class="mt-2">Student gender preference</label>
-			<select name="gender-pref" id="gender-pref" class="form-control">
-				<option value="either">either</option>
-				<option value="male">male</option>
-				<option value="female">female</option>
-			</select>
-		</div>
-	</div> -->
-
-
-
-	<!-- button to next tab -->
-<!-- 	<div class="form-group row">
-		<div class="col-md-3">
-			<a class="btn btn-primary" id="btn-pets" data-toggle="tab" href="#petsInfo" role="tab">Next</a>
-
-		</div>
-	</div> -->

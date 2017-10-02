@@ -31,32 +31,25 @@ var HostFamilySchema = new mongoose.Schema( {
 		// 	occupation: String,
 		// 	hobbies: [String],
 		// 	notes: String
-		famMbrs: {},
-		// }]
-		pets: {}
 
-		// address: {
-		// 	street: String,
-		// 	addr2: String,
-		// 	city: String,
-		// 	state: String,
-		// 	zip: String
-		// },
-	// accomodations: {
-	// 	bedroom: String,
-	// 	bathroom: String,
-	// 	genderPref: String,
-	// 	religiousOK: Boolean,
-	// 	dietaryOK: Boolean,
-	// 	multipleGuestsOK: Boolean,
-	// 	otherProgsOK: Boolean,
-	// 	returnTime: String,
-	// 	commuteType: String,
-	// 	line: String,
-	// 	tickets: Number,
-	// 	commuteTime: String,
-	// 	notes: String
-	// },
+		// }]
+		famMbrs: {},
+		accomodations: {
+			bedroom: String,
+			bathroom: String,
+			genderPref: String,
+			religiousOK: Boolean,
+			dietOK: Boolean,
+			multiGuestsOK: Boolean,
+			otherProgsOK: Boolean,
+			returnTime: String,
+			// commuteType: String,
+			line: String,
+			tickets: Number,
+			commuteTime: String,
+			notes: String
+		},
+		pets: {}
 
 	}
 });
